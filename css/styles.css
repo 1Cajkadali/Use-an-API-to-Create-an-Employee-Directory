@@ -1,0 +1,123 @@
+body {
+    position: relative;
+    background-color: rgb(243, 241, 241);
+}
+
+/* mobile first */
+
+header {
+    min-width: 320px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    min-width: 320px;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+}
+
+.card {
+    max-width: 350px;
+    width: 70%;
+    margin: 15px auto;
+    border: 1px solid rgb(155, 166, 177);
+    padding: 5px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.card p, h2 {
+    margin: 14px 0;
+}
+
+
+.text-container {
+    float: right;
+    text-align: center;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    margin-top: 5px;
+}
+
+/* 768px */
+
+@media (min-width: 768px) {
+
+    header {
+        text-align: left;
+        margin-left: 15px;
+    }
+
+    .grid-container {
+        min-width: 768px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        grid-gap: 25px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 320px;
+    }
+}
+
+/* 1024px */
+
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+    
+    .card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 75%;
+    }
+}
+
+
+/* overlay and modal */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(100, 100, 100, 0.4)
+}        
+
+.modal {
+    width: 375px;
+    margin: 15% auto auto;
+    position: relative;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #778;
+    border-radius: 5px;
+    padding: 30px 20px;
+    height: 350px;
+}
+
+.modal .text-container {
+    float: none;
+}
+
+.modal-close {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
